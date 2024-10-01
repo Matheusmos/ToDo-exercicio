@@ -1,0 +1,16 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  api-db:
+    container_name: api-mysql
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: example
+      MYSQL_USER: user
+      MYSQL_PASSWORD: example
+    # (this is just an example, not intended to be a production configuration)

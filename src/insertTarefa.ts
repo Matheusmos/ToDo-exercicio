@@ -24,7 +24,7 @@ const insertTask = (title: string, description: string) => {
         const taskId = results.insertId
 
         // Consultar a tarefa nova
-        const selectQuery = `SELECT created_at FROM tasks WHERE id = ?`;
+        const selectQuery = `SELECT created_at FROM tarefas WHERE id = ?`;
         connection.query(selectQuery, [taskId], (err, rows) => {
             if (err) {
                 console.error('Erro ao obter a data de criação:', err);

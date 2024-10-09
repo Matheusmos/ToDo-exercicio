@@ -4,7 +4,7 @@ version: '3.1'
 services:
 
   api-db:
-    container_name: api-mysql
+    container_name: todo-mysql
     image: mysql
     ports:
       - "3306:3306"
